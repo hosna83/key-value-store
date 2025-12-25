@@ -1,4 +1,12 @@
-.venv/
+# Python
+__pycache__/
 __pycache__/
 *.pyc
+
+# Virtual environment
+.venv/
+venv/
 .env
+
+# Pytest
+.pytest_cache/
