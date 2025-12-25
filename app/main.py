@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Any
 from .store import InMemoryStore, KeyNotFoundError
 
@@ -7,7 +7,7 @@ app = FastAPI()
 store = InMemoryStore()
 
 class KeyValue(BaseModel):
-    key: str
+    key: str = Field(..., min_length=1, description="Key must not be empty")
     value: Any
 
 @app.get("/")
