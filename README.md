@@ -16,7 +16,7 @@ A lightweight in-memory key-value store built with FastAPI, allowing you to stor
 ```bash
 docker build -t key-value-store .
 docker run -p 8000:8000 key-value-store
-
+```
 Access the API: http://localhost:8000
 Swagger docs: http://localhost:8000/docs
 
